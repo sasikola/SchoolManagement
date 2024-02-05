@@ -8,8 +8,7 @@ require("./db");
 const app = express();
 app.use(
   cors({
-    origin: ["https://school-api-rho.vercel.app"],
-    methods:["POST","GET"],
+    origin: "http://localhost:5173",
     credentials: true,
   })
 );

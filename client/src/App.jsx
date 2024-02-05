@@ -10,9 +10,9 @@ import Navbar from "./components/Navbar";
 import CreateStudent from "./Pages/CreateStudent";
 import Student from "./Pages/Student";
 import UpdateStudent from "./Pages/UpdateStudent";
-import CreateTeacher from "./Pages/createTeacher";
 import Teacher from "./Pages/Teacher";
 import UpdateTeacher from "./Pages/UpdateTeacher";
+import CreateTeacher from "./Pages/CreateTeacher";
 
 function App() {
   const loading = useSelector((state) => state.alerts.loading);
@@ -54,7 +54,7 @@ function App() {
             path="/"
             element={
               <ProtectedRoutes>
-                {" "}
+                
                 <Home />
               </ProtectedRoutes>
             }
@@ -64,7 +64,7 @@ function App() {
             path="/login"
             element={
               <PublicRoutes>
-                <Login />{" "}
+                <Login />
               </PublicRoutes>
             }
           />
@@ -72,7 +72,7 @@ function App() {
             path="/register"
             element={
               <PublicRoutes>
-                <Register />{" "}
+                <Register />
               </PublicRoutes>
             }
           />
@@ -83,7 +83,7 @@ function App() {
             path="/createStudent"
             element={
               <ProtectedRoutes>
-                <CreateStudent />{" "}
+                <CreateStudent />
               </ProtectedRoutes>
             }
           />
@@ -91,7 +91,7 @@ function App() {
             path="/createTeacher"
             element={
               <ProtectedRoutes>
-                <CreateTeacher />{" "}
+                <CreateTeacher />
               </ProtectedRoutes>
             }
           />
@@ -100,7 +100,7 @@ function App() {
             path="/student"
             element={
               <ProtectedRoutes>
-                <Student />{" "}
+                <Student />
               </ProtectedRoutes>
             }
           />
@@ -108,7 +108,7 @@ function App() {
             path="/teacher"
             element={
               <ProtectedRoutes>
-                <Teacher />{" "}
+                <Teacher />
               </ProtectedRoutes>
             }
           />
@@ -125,7 +125,7 @@ function App() {
             path="/editTeacher/:id"
             element={
               <ProtectedRoutes>
-                <UpdateTeacher />{" "}
+                <UpdateTeacher />
               </ProtectedRoutes>
             }
           />
