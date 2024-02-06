@@ -46,36 +46,6 @@ router.post("/register", async (req, res) => {
 
 // LOGIN
 
-// router.post("/login", async (req, res) => {
-//   try {
-//     const { email, password } = req.body;
-
-//     // Find the user by email
-//     const user = await userModel.findOne({ email });
-
-//     if (!user) {
-//       return res.status(401).json({ error: "Invalid Email", success: false });
-//     }
-
-//     // Compare the provided password with the hashed password
-//     const isPasswordValid = await bcrypt.compare(password, user.password);
-
-//     if (!isPasswordValid) {
-//       return res
-//         .status(401)
-//         .json({ error: "Invalid Password", success: false });
-//     }
-
-//     // Generate a JWT token
-//     const token = jwt.sign({ id: user._id }, "your-secret-key", {
-//       expiresIn: "1h", // Token expires in 1 hour
-//     });
-//     res.json({ token, message: "User loggedin successfully", success: true });
-//   } catch (error) {
-//     console.error(error.message);
-//     res.status(500).json({ error: "Error logged in " });
-//   }
-// });
 
 router.post("/login", async (req, res) => {
   try {
