@@ -52,7 +52,7 @@ function Login() {
     try {
       dispatch(showLoading());
       const response = await axios.post(
-        "http://localhost:3000/api/user/login",
+        "https://school-mgmt-api.vercel.app/api/user/login",
         loginData
       );
       console.log(response.data);
