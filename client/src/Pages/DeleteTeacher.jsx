@@ -9,7 +9,7 @@ const DeleteTeacher = ({ teacherId, onDelete }) => {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:3000/teacher/deleteTeacher/${id}`)
+      .delete(`https://school-mgmt-api.vercel.app/teacher/deleteTeacher/${id}`)
       .then((res) => {
         dispatch(deleteTeacher({ id }));
         onDelete(teacherId);
