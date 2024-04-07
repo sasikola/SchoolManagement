@@ -11,7 +11,7 @@ const StudentCard = ({student}) => {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:3000/student/deleteStudent/${id}`)
+      .delete(`https://school-mgmt-api.vercel.app/student/deleteStudent/${id}`)
       .then((res) => {
         dispatch(deleteStudent({ id }));
         console.log(res);
