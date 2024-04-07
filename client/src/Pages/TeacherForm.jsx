@@ -27,7 +27,7 @@ const TeacherForm = () => {
     try {
       dispatch(showLoading());
       const response = await axios.post(
-        "http://localhost:3000/teacher/sendTeacher",
+        "https://school-mgmt-api.vercel.app/teacher/sendTeacher",
         formData
       );
       dispatch(hideLoading());
