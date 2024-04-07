@@ -28,7 +28,7 @@ const Register = () => {
     try {
       dispatch(showLoading());
       const response = await axios.post(
-        "http://localhost:3000/api/user/register",
+        "https://school-mgmt-api.vercel.app/api/user/register",
         formData
       );
       dispatch(hideLoading());
