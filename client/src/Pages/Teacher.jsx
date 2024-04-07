@@ -19,7 +19,7 @@ function Teacher({ teacherId }) {
       try {
         dispatch(showLoading());
         const response = await axios.get(
-          "http://localhost:3000/teacher/getTeacher"
+          "https://school-mgmt-api.vercel.app/teacher/getTeacher"
         );
         console.log(response.data);
         setTeachers(response.data);
@@ -40,7 +40,7 @@ function Teacher({ teacherId }) {
       dispatch(showLoading());
       // Make an API request to delete the student
       await axios.delete(
-        `http://localhost:3000/teacher/deleteTeacher/${teacherId}`
+        `https://school-mgmt-api.vercel.app/teacher/deleteTeacher/${teacherId}`
       );
       // Fetch updated student details after deletion
       const response = await axios.get(
