@@ -8,7 +8,7 @@ const TeacherList = () => {
   useEffect(() => {
     const fetchStudentDetails = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/teacher/getTeacher');
+        const response = await axios.get('https://school-mgmt-api.vercel.app/teacher/getTeacher');
         setTeacherDetails(response.data);
         setLoading(false);
       } catch (error) {
