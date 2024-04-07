@@ -23,7 +23,7 @@ function Home() {
   const getData = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/user/get-user-info-by-id",
+        "https://school-mgmt-api.vercel.app/api/user/get-user-info-by-id",
         {},
         {
           headers: {
