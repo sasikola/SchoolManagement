@@ -6,13 +6,21 @@ const teacherRouter = require("./Routers/teacherRoute");
 require("./db");
 
 const app = express();
-app.use(
-  cors({
-    origin: ["https://school-mngmt.vercel.app"],
-    methods: ["POST", "GET"],
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: ["https://school-mngmt.vercel.app"],
+//     methods: ["POST", "GET"],
+//     credentials: true,
+//   })
+// );
+
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://school-mngmt.vercel.app');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  next();
+});
 
 
 app.use(express.json());
