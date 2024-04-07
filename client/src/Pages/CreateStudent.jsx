@@ -30,7 +30,7 @@ function CreateStudent() {
     try {
       dispatch(showLoading());
       const response = await axios.post(
-        "http://localhost:3000/student/sendStudent",
+        "https://school-mgmt-api.vercel.app/student/sendStudent",
         formData
       );
       dispatch(hideLoading());
