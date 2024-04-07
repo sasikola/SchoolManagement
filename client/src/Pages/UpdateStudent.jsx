@@ -28,7 +28,7 @@ function UpdateStudent() {
   const handleUpdate = (e) => {
     e.preventDefault();
     axios
-      .put(`http://localhost:3000/student/updateStudent/${id}`, formData)
+      .put(`https://school-mgmt-api.vercel.app/student/updateStudent/${id}`, formData)
       .then((res) => {
         console.log(res);
         dispatch(updatedStudent({ id, formData }));
