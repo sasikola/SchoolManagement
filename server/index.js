@@ -8,7 +8,7 @@ require("./db");
 const app = express();
 app.use(
   cors({
-    origin: ["hhttps://school-mngmt.vercel.app"],
+    origin: ["https://school-mngmt.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true,
   })
